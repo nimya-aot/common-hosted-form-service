@@ -17,10 +17,10 @@
 
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
-| Content Security Policy (CSP) Header Not Set | Medium | 3 |
-| Permissions Policy Header Not Set | Low | 3 |
-| Strict-Transport-Security Header Not Set | Low | 3 |
-| Non-Storable Content | Informational | 3 |
+| Content Security Policy (CSP) Header Not Set | Medium | 4 |
+| Permissions Policy Header Not Set | Low | 4 |
+| Strict-Transport-Security Header Not Set | Low | 4 |
+| Non-Storable Content | Informational | 4 |
 
 
 
@@ -39,7 +39,12 @@
 
 Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-604
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -55,7 +60,7 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Attack: ``
   * Evidence: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -90,7 +95,12 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-604
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -106,7 +116,7 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Attack: ``
   * Evidence: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -139,7 +149,12 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-604
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -155,7 +170,7 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Attack: ``
   * Evidence: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -188,7 +203,12 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: ``
+  * Attack: ``
+  * Evidence: `no-store`
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-604
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -204,7 +224,7 @@ The response contents are not storable by caching components such as proxy serve
   * Attack: ``
   * Evidence: `no-store`
 
-Instances: 3
+Instances: 4
 
 ### Solution
 

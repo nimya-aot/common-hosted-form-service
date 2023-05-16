@@ -39,22 +39,22 @@
 
 Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-713
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/pr-714
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -95,22 +95,22 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-713
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/pr-714
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -149,22 +149,22 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-713
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/pr-714
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -203,22 +203,22 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-713
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/pr-714
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://medis-chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``

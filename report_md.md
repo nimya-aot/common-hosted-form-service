@@ -50,7 +50,7 @@
 
 Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `content-security-policy`
   * Attack: ``
@@ -95,7 +95,7 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -146,7 +146,7 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: `X-Frame-Options`
   * Attack: ``
@@ -185,12 +185,12 @@ If you expect the page to be framed only by pages on your server (e.g. it's part
  - Potential vulnerabilities on the proxy servers that service the application.
  - The presence or absence of any proxy-based components that might cause attacks against the application to be detected, prevented, or mitigated. 
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: ``
   * Attack: `TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: `TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.`
@@ -229,11 +229,11 @@ Configure all proxies, application servers, and web servers to prevent disclosur
 
 A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
-  * Parameter: `f22367d74c5391387655e1e4792dc07d`
+  * Parameter: `8dc277f123d3becfaddf276e7f4671fd`
   * Attack: ``
-  * Evidence: `set-cookie: f22367d74c5391387655e1e4792dc07d`
+  * Evidence: `set-cookie: 8dc277f123d3becfaddf276e7f4671fd`
 
 Instances: 1
 
@@ -269,7 +269,7 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -318,12 +318,12 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 The web/application server is leaking information via one or more "X-Powered-By" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `x-powered-by: Express`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -364,7 +364,7 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -413,7 +413,7 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: `X-Content-Type-Options`
   * Attack: ``
@@ -450,12 +450,12 @@ If possible, ensure that the end user uses a standards-compliant and modern web 
 
 Repeated GET requests: drop a different cookie each time, followed by normal request with all cookies to stabilize session, compare responses against original baseline GET. This can reveal areas where cookie based authentication/attributes are not actually enforced.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -490,11 +490,11 @@ Instances: 2
 
 The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `<script src="/pr-794/js/chunk-vendors.caf7955a.js"></script>`
+  * Evidence: `<script src="/pr-787/js/chunk-vendors.caf7955a.js"></script>`
 
 Instances: 1
 
@@ -524,7 +524,7 @@ The response contents are not storable by caching components such as proxy serve
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -582,7 +582,7 @@ It must have a status code that is defined as cacheable by default (200, 203, 20
 
 The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: `Cache-Control`
   * Attack: ``
@@ -619,7 +619,7 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. 
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794/
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -656,62 +656,62 @@ Instances: 1
 
 Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-794
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-787
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`

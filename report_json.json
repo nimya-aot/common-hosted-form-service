@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Thu, 29 Jun 2023 21:12:15",
+	"@generated": "Tue, 4 Jul 2023 04:19:20",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -28,7 +28,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-826",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-830",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -79,7 +79,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-826",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-830",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -130,7 +130,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-826",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-830",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -181,7 +181,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-826",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-830",
 							"method": "GET",
 							"param": "",
 							"attack": "",

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Wed, 5 Jul 2023 20:01:20",
+	"@generated": "Thu, 6 Jul 2023 15:21:27",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -88,33 +88,6 @@
 					"sourceid": "8"
 				},
 				{
-					"pluginid": "10020",
-					"alertRef": "10020-1",
-					"alert": "Missing Anti-clickjacking Header",
-					"name": "Missing Anti-clickjacking Header",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
-					"instances":[ 
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-838/",
-							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
-					"cweid": "1021",
-					"wascid": "15",
-					"sourceid": "3"
-				},
-				{
 					"pluginid": "40025",
 					"alertRef": "40025",
 					"alert": "Proxy Disclosure",
@@ -147,7 +120,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "579"
+					"sourceid": "589"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +346,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p><p></p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "670"
+					"sourceid": "679"
 				},
 				{
 					"pluginid": "10109",
@@ -620,7 +593,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "338"
+					"sourceid": "344"
 				}
 			]
 		}

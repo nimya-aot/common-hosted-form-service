@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.13.0",
-	"@generated": "Wed, 12 Jul 2023 22:55:25",
+	"@generated": "Wed, 12 Jul 2023 23:19:19",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "843"
+					"sourceid": "607"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p><p></p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "948"
+					"sourceid": "711"
 				},
 				{
 					"pluginid": "10109",
@@ -495,7 +495,7 @@
 							"method": "GET",
 							"param": "aa9bcdf2aa172bd4923c79a2c4e51d8e",
 							"attack": "",
-							"evidence": "047fa4d23a409a05935e615e75b34a09",
+							"evidence": "e5d191121463f4e3b3ba36c57b1cdc1b",
 							"otherinfo": "\ncookie:aa9bcdf2aa172bd4923c79a2c4e51d8e"
 						},
 						{
@@ -503,7 +503,7 @@
 							"method": "GET",
 							"param": "aa9bcdf2aa172bd4923c79a2c4e51d8e",
 							"attack": "",
-							"evidence": "047fa4d23a409a05935e615e75b34a09",
+							"evidence": "e5d191121463f4e3b3ba36c57b1cdc1b",
 							"otherinfo": "\ncookie:aa9bcdf2aa172bd4923c79a2c4e51d8e"
 						}
 					],
@@ -655,7 +655,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "612"
+					"sourceid": "375"
 				}
 			]
 		}

@@ -624,12 +624,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `aa9bcdf2aa172bd4923c79a2c4e51d8e`
   * Attack: ``
-  * Evidence: `b6d0ccd5c733db58c2d5932b8e766ac5`
+  * Evidence: `50f21c4237dedfdffb3f5272766bc32d`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-874
   * Method: `GET`
   * Parameter: `aa9bcdf2aa172bd4923c79a2c4e51d8e`
   * Attack: ``
-  * Evidence: `b6d0ccd5c733db58c2d5932b8e766ac5`
+  * Evidence: `50f21c4237dedfdffb3f5272766bc32d`
 
 Instances: 2
 

@@ -6,7 +6,7 @@
 | Risk Level | Number of Alerts |
 | --- | --- |
 | High | 0 |
-| Medium | 4 |
+| Medium | 3 |
 | Low | 5 |
 | Informational | 7 |
 
@@ -19,7 +19,6 @@
 | --- | --- | --- |
 | CSP: Wildcard Directive | Medium | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 4 |
-| Missing Anti-clickjacking Header | Medium | 1 |
 | Proxy Disclosure | Medium | 2 |
 | Cookie with SameSite Attribute None | Low | 1 |
 | Permissions Policy Header Not Set | Low | 4 |
@@ -131,42 +130,6 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 
 #### CWE Id: [ 693 ](https://cwe.mitre.org/data/definitions/693.html)
-
-
-#### WASC Id: 15
-
-#### Source ID: 3
-
-### [ Missing Anti-clickjacking Header ](https://www.zaproxy.org/docs/alerts/10020/)
-
-
-
-##### Medium (Medium)
-
-### Description
-
-The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.
-
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-833/
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-
-Instances: 1
-
-### Solution
-
-Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.
-If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.
-
-### Reference
-
-
-* [ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-
-
-#### CWE Id: [ 1021 ](https://cwe.mitre.org/data/definitions/1021.html)
 
 
 #### WASC Id: 15
@@ -624,12 +587,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `fc01c8a3cd4d44217c0955933da80179`
   * Attack: ``
-  * Evidence: `c67de26ad60b7e1fbc00f54e5440a4a4`
+  * Evidence: `c177e1ebfb72fec162adb9c44fbdb0b2`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-833
   * Method: `GET`
   * Parameter: `fc01c8a3cd4d44217c0955933da80179`
   * Attack: ``
-  * Evidence: `c67de26ad60b7e1fbc00f54e5440a4a4`
+  * Evidence: `c177e1ebfb72fec162adb9c44fbdb0b2`
 
 Instances: 2
 

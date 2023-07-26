@@ -280,7 +280,7 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -325,7 +325,7 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -370,7 +370,7 @@ Specifies the relationship between request initiator's origin and target's origi
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -415,7 +415,7 @@ Specifies if a navigation request was initiated by a user.
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``

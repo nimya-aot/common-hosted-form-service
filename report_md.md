@@ -48,7 +48,7 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -104,7 +104,7 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -158,7 +158,7 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -212,7 +212,7 @@ The response contents are not storable by caching components such as proxy serve
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -275,7 +275,7 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -320,7 +320,7 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -365,7 +365,7 @@ Specifies the relationship between request initiator's origin and target's origi
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -410,7 +410,7 @@ Specifies if a navigation request was initiated by a user.
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-918
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``

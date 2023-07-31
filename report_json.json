@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.13.0",
-	"@generated": "Fri, 28 Jul 2023 15:34:56",
+	"@generated": "Mon, 31 Jul 2023 16:19:01",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -28,7 +28,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -79,7 +79,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -130,7 +130,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -181,7 +181,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -232,7 +232,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -275,7 +275,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -318,7 +318,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -361,7 +361,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-921",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-922",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",

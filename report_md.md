@@ -6,7 +6,7 @@
 | Risk Level | Number of Alerts |
 | --- | --- |
 | High | 0 |
-| Medium | 4 |
+| Medium | 3 |
 | Low | 5 |
 | Informational | 11 |
 
@@ -19,7 +19,6 @@
 | --- | --- | --- |
 | CSP: Wildcard Directive | Medium | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 4 |
-| Missing Anti-clickjacking Header | Medium | 1 |
 | Proxy Disclosure | Medium | 2 |
 | Cookie with SameSite Attribute None | Low | 1 |
 | Permissions Policy Header Not Set | Low | 4 |
@@ -30,10 +29,10 @@
 | Modern Web Application | Informational | 1 |
 | Non-Storable Content | Informational | 4 |
 | Re-examine Cache-control Directives | Informational | 1 |
-| Sec-Fetch-Dest Header is Missing | Informational | 4 |
-| Sec-Fetch-Mode Header is Missing | Informational | 4 |
-| Sec-Fetch-Site Header is Missing | Informational | 4 |
-| Sec-Fetch-User Header is Missing | Informational | 4 |
+| Sec-Fetch-Dest Header is Missing | Informational | 3 |
+| Sec-Fetch-Mode Header is Missing | Informational | 3 |
+| Sec-Fetch-Site Header is Missing | Informational | 3 |
+| Sec-Fetch-User Header is Missing | Informational | 3 |
 | Session Management Response Identified | Informational | 2 |
 | Storable but Non-Cacheable Content | Informational | 1 |
 | User Agent Fuzzer | Informational | 12 |
@@ -135,42 +134,6 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 
 #### CWE Id: [ 693 ](https://cwe.mitre.org/data/definitions/693.html)
-
-
-#### WASC Id: 15
-
-#### Source ID: 3
-
-### [ Missing Anti-clickjacking Header ](https://www.zaproxy.org/docs/alerts/10020/)
-
-
-
-##### Medium (Medium)
-
-### Description
-
-The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.
-
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-940/
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-
-Instances: 1
-
-### Solution
-
-Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.
-If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.
-
-### Reference
-
-
-* [ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-
-
-#### CWE Id: [ 1021 ](https://cwe.mitre.org/data/definitions/1021.html)
 
 
 #### WASC Id: 15
@@ -639,13 +602,8 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -689,13 +647,8 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -739,13 +692,8 @@ Specifies the relationship between request initiator's origin and target's origi
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -789,13 +737,8 @@ Specifies if a navigation request was initiated by a user.
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -828,12 +771,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `afb300740c29751850ee106d4d86a690`
   * Attack: ``
-  * Evidence: `d60cef6c9f599d0e7c04d3667d29fed1`
+  * Evidence: `4837a60d2b5e17288637baeeb31decd8`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-940
   * Method: `GET`
   * Parameter: `afb300740c29751850ee106d4d86a690`
   * Attack: ``
-  * Evidence: `d60cef6c9f599d0e7c04d3667d29fed1`
+  * Evidence: `4837a60d2b5e17288637baeeb31decd8`
 
 Instances: 2
 

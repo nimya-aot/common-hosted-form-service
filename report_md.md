@@ -6,7 +6,7 @@
 | Risk Level | Number of Alerts |
 | --- | --- |
 | High | 0 |
-| Medium | 3 |
+| Medium | 4 |
 | Low | 5 |
 | Informational | 11 |
 
@@ -17,6 +17,7 @@
 
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
+| CSP: Wildcard Directive | Medium | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 4 |
 | Missing Anti-clickjacking Header | Medium | 1 |
 | Proxy Disclosure | Medium | 2 |
@@ -43,6 +44,46 @@
 ## Alert Detail
 
 
+
+### [ CSP: Wildcard Directive ](https://www.zaproxy.org/docs/alerts/10055/)
+
+
+
+##### Medium (High)
+
+### Description
+
+Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
+
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-940
+  * Method: `GET`
+  * Parameter: `content-security-policy`
+  * Attack: ``
+  * Evidence: `default-src 'none'`
+
+Instances: 1
+
+### Solution
+
+Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+
+### Reference
+
+
+* [ http://www.w3.org/TR/CSP2/ ](http://www.w3.org/TR/CSP2/)
+* [ http://www.w3.org/TR/CSP/ ](http://www.w3.org/TR/CSP/)
+* [ http://caniuse.com/#search=content+security+policy ](http://caniuse.com/#search=content+security+policy)
+* [ http://content-security-policy.com/ ](http://content-security-policy.com/)
+* [ https://github.com/shapesecurity/salvation ](https://github.com/shapesecurity/salvation)
+* [ https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources ](https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources)
+
+
+#### CWE Id: [ 693 ](https://cwe.mitre.org/data/definitions/693.html)
+
+
+#### WASC Id: 15
+
+#### Source ID: 3
 
 ### [ Content Security Policy (CSP) Header Not Set ](https://www.zaproxy.org/docs/alerts/10038/)
 
@@ -787,12 +828,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `afb300740c29751850ee106d4d86a690`
   * Attack: ``
-  * Evidence: `43d0d6f276a30310fd4272e1132b574e`
+  * Evidence: `d60cef6c9f599d0e7c04d3667d29fed1`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-940
   * Method: `GET`
   * Parameter: `afb300740c29751850ee106d4d86a690`
   * Attack: ``
-  * Evidence: `43d0d6f276a30310fd4272e1132b574e`
+  * Evidence: `d60cef6c9f599d0e7c04d3667d29fed1`
 
 Instances: 2
 

@@ -624,17 +624,17 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Dest`
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -669,17 +669,17 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Mode`
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -714,17 +714,17 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Site`
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -759,17 +759,17 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-User`
+  * Attack: ``
+  * Evidence: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
@@ -808,12 +808,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `b53afda5fdf4ad9e5732befce88b1525`
   * Attack: ``
-  * Evidence: `fa70b03dbca516dab9320ece59a4ea49`
+  * Evidence: `ddf51fc2de58a0ae2816b7765741f386`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-892
   * Method: `GET`
   * Parameter: `b53afda5fdf4ad9e5732befce88b1525`
   * Attack: ``
-  * Evidence: `fa70b03dbca516dab9320ece59a4ea49`
+  * Evidence: `ddf51fc2de58a0ae2816b7765741f386`
 
 Instances: 2
 

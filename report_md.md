@@ -6,7 +6,7 @@
 | Risk Level | Number of Alerts |
 | --- | --- |
 | High | 0 |
-| Medium | 4 |
+| Medium | 3 |
 | Low | 5 |
 | Informational | 11 |
 
@@ -19,7 +19,6 @@
 | --- | --- | --- |
 | CSP: Wildcard Directive | Medium | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 4 |
-| Missing Anti-clickjacking Header | Medium | 1 |
 | Proxy Disclosure | Medium | 2 |
 | Cookie with SameSite Attribute None | Low | 1 |
 | Permissions Policy Header Not Set | Low | 4 |
@@ -135,42 +134,6 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 
 #### CWE Id: [ 693 ](https://cwe.mitre.org/data/definitions/693.html)
-
-
-#### WASC Id: 15
-
-#### Source ID: 3
-
-### [ Missing Anti-clickjacking Header ](https://www.zaproxy.org/docs/alerts/10020/)
-
-
-
-##### Medium (Medium)
-
-### Description
-
-The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.
-
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952/
-  * Method: `GET`
-  * Parameter: `x-frame-options`
-  * Attack: ``
-  * Evidence: ``
-
-Instances: 1
-
-### Solution
-
-Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.
-If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.
-
-### Reference
-
-
-* [ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-
-
-#### CWE Id: [ 1021 ](https://cwe.mitre.org/data/definitions/1021.html)
 
 
 #### WASC Id: 15
@@ -624,6 +587,11 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Dest`
+  * Attack: ``
+  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
@@ -635,11 +603,6 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -674,6 +637,11 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Mode`
+  * Attack: ``
+  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
@@ -685,11 +653,6 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -724,6 +687,11 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Site`
+  * Attack: ``
+  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
@@ -735,11 +703,6 @@ Specifies the relationship between request initiator's origin and target's origi
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -774,6 +737,11 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-User`
+  * Attack: ``
+  * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
@@ -785,11 +753,6 @@ Specifies if a navigation request was initiated by a user.
   * Attack: ``
   * Evidence: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
@@ -828,12 +791,12 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `aacea9b06d5e5e3ee8a14ec8c1809a9b`
   * Attack: ``
-  * Evidence: `5fc67419be69f4a7b6861930e171ef84`
+  * Evidence: `e2221b6fda9a966b1bec7a6fc4c2d329`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-952
   * Method: `GET`
   * Parameter: `aacea9b06d5e5e3ee8a14ec8c1809a9b`
   * Attack: ``
-  * Evidence: `5fc67419be69f4a7b6861930e171ef84`
+  * Evidence: `e2221b6fda9a966b1bec7a6fc4c2d329`
 
 Instances: 2
 

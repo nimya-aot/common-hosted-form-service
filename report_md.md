@@ -6,7 +6,7 @@
 | Risk Level | Number of Alerts |
 | --- | --- |
 | High | 0 |
-| Medium | 3 |
+| Medium | 4 |
 | Low | 5 |
 | Informational | 11 |
 
@@ -17,6 +17,7 @@
 
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
+| CSP: Wildcard Directive | Medium | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 4 |
 | Missing Anti-clickjacking Header | Medium | 1 |
 | Proxy Disclosure | Medium | 2 |
@@ -44,6 +45,50 @@
 
 
 
+### [ CSP: Wildcard Directive ](https://www.zaproxy.org/docs/alerts/10055/)
+
+
+
+##### Medium (High)
+
+### Description
+
+Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
+
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
+  * Method: `GET`
+  * Parameter: `content-security-policy`
+  * Attack: ``
+  * Evidence: `default-src 'none'`
+  * Other Info: `The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+frame-ancestors, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.`
+
+Instances: 1
+
+### Solution
+
+Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+
+### Reference
+
+
+* [ http://www.w3.org/TR/CSP2/ ](http://www.w3.org/TR/CSP2/)
+* [ http://www.w3.org/TR/CSP/ ](http://www.w3.org/TR/CSP/)
+* [ http://caniuse.com/#search=content+security+policy ](http://caniuse.com/#search=content+security+policy)
+* [ http://content-security-policy.com/ ](http://content-security-policy.com/)
+* [ https://github.com/shapesecurity/salvation ](https://github.com/shapesecurity/salvation)
+* [ https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources ](https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources)
+
+
+#### CWE Id: [ 693 ](https://cwe.mitre.org/data/definitions/693.html)
+
+
+#### WASC Id: 15
+
+#### Source ID: 3
+
 ### [ Content Security Policy (CSP) Header Not Set ](https://www.zaproxy.org/docs/alerts/10038/)
 
 
@@ -59,21 +104,25 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -115,6 +164,7 @@ The response does not include either Content-Security-Policy with 'frame-ancesto
   * Parameter: `x-frame-options`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 1
 
@@ -154,11 +204,21 @@ If you expect the page to be framed only by pages on your server (e.g. it's part
   * Parameter: ``
   * Attack: `TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.`
   * Evidence: ``
+  * Other Info: `Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: 
+- Unknown
+The following web/application server has been identified: 
+- [Express]
+`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: `TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.`
   * Evidence: ``
+  * Other Info: `Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: 
+- Unknown
+The following web/application server has been identified: 
+- [Express]
+`
 
 Instances: 2
 
@@ -198,6 +258,7 @@ A cookie has been set with its SameSite attribute set to "none", which means tha
   * Parameter: `9c1d01434173679a96806364ea67eba5`
   * Attack: ``
   * Evidence: `set-cookie: 9c1d01434173679a96806364ea67eba5`
+  * Other Info: ``
 
 Instances: 1
 
@@ -233,21 +294,25 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -287,11 +352,13 @@ The web/application server is leaking information via one or more "X-Powered-By"
   * Parameter: ``
   * Attack: ``
   * Evidence: `x-powered-by: Express`
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `x-powered-by: Express`
+  * Other Info: ``
 
 Instances: 2
 
@@ -328,21 +395,25 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -382,6 +453,8 @@ The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. T
   * Parameter: `x-content-type-options`
   * Attack: ``
   * Evidence: ``
+  * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At "High" threshold this scan rule will not alert on client or server error responses.`
 
 Instances: 1
 
@@ -419,11 +492,19 @@ Repeated GET requests: drop a different cookie each time, followed by normal req
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: `Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
+These cookies affected the response: 
+These cookies did NOT affect the response: 9c1d01434173679a96806364ea67eba5
+`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
+  * Other Info: `Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
+These cookies affected the response: 
+These cookies did NOT affect the response: 9c1d01434173679a96806364ea67eba5
+`
 
 Instances: 2
 
@@ -459,6 +540,7 @@ The application appears to be a modern web application. If you need to explore i
   * Parameter: ``
   * Attack: ``
   * Evidence: `<script src="/pr-958/js/chunk-vendors.e1706700.js"></script>`
+  * Other Info: `No links have been found while there are scripts, which is an indication that this is a modern web application.`
 
 Instances: 1
 
@@ -488,21 +570,25 @@ The response contents are not storable by caching components such as proxy serve
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `private`
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
   * Evidence: `no-store`
+  * Other Info: ``
 
 Instances: 4
 
@@ -551,6 +637,7 @@ The cache-control header has not been set properly or is missing, allowing the b
   * Parameter: `cache-control`
   * Attack: ``
   * Evidence: `public, max-age=0`
+  * Other Info: ``
 
 Instances: 1
 
@@ -588,21 +675,25 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -638,21 +729,25 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -688,21 +783,25 @@ Specifies the relationship between request initiator's origin and target's origi
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -738,21 +837,25 @@ Specifies if a navigation request was initiated by a user.
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958/
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 4
 
@@ -787,12 +890,16 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `9c1d01434173679a96806364ea67eba5`
   * Attack: ``
-  * Evidence: `984b1578ac956e7c4ac3ef080ded7861`
+  * Evidence: `fa5c119aa66ed31cb4abc7178771a050`
+  * Other Info: `
+cookie:9c1d01434173679a96806364ea67eba5`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `9c1d01434173679a96806364ea67eba5`
   * Attack: ``
-  * Evidence: `984b1578ac956e7c4ac3ef080ded7861`
+  * Evidence: `fa5c119aa66ed31cb4abc7178771a050`
+  * Other Info: `
+cookie:9c1d01434173679a96806364ea67eba5`
 
 Instances: 2
 
@@ -824,6 +931,7 @@ The response contents are storable by caching components such as proxy servers, 
   * Parameter: ``
   * Attack: ``
   * Evidence: `max-age=0`
+  * Other Info: ``
 
 Instances: 1
 
@@ -861,61 +969,73 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
   * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-958
   * Method: `GET`
   * Parameter: `Header User-Agent`
   * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
   * Evidence: ``
+  * Other Info: ``
 
 Instances: 12
 

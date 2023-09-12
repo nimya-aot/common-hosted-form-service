@@ -682,7 +682,7 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -730,7 +730,7 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -778,7 +778,7 @@ Specifies the relationship between request initiator's origin and target's origi
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -826,7 +826,7 @@ Specifies if a navigation request was initiated by a user.
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
@@ -866,14 +866,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `ef0085f910efbbcec2c6b49473a1c34b`
   * Attack: ``
-  * Evidence: `2616a36e961c063a331845dfa459fb1a`
+  * Evidence: `395d94a4547b9c0d7f7a9ce9049d87f7`
   * Other Info: `
 cookie:ef0085f910efbbcec2c6b49473a1c34b`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-992
   * Method: `GET`
   * Parameter: `ef0085f910efbbcec2c6b49473a1c34b`
   * Attack: ``
-  * Evidence: `2616a36e961c063a331845dfa459fb1a`
+  * Evidence: `395d94a4547b9c0d7f7a9ce9049d87f7`
   * Other Info: `
 cookie:ef0085f910efbbcec2c6b49473a1c34b`
 

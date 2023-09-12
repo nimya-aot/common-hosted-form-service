@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.13.0",
-	"@generated": "Tue, 12 Sep 2023 19:59:51",
+	"@generated": "Tue, 12 Sep 2023 21:40:19",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "586"
+					"sourceid": "518"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "691"
+					"sourceid": "623"
 				},
 				{
 					"pluginid": "10109",
@@ -507,7 +507,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -550,7 +550,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -593,7 +593,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -636,7 +636,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -667,7 +667,7 @@
 							"method": "GET",
 							"param": "ef0085f910efbbcec2c6b49473a1c34b",
 							"attack": "",
-							"evidence": "2616a36e961c063a331845dfa459fb1a",
+							"evidence": "395d94a4547b9c0d7f7a9ce9049d87f7",
 							"otherinfo": "\ncookie:ef0085f910efbbcec2c6b49473a1c34b"
 						},
 						{
@@ -675,7 +675,7 @@
 							"method": "GET",
 							"param": "ef0085f910efbbcec2c6b49473a1c34b",
 							"attack": "",
-							"evidence": "2616a36e961c063a331845dfa459fb1a",
+							"evidence": "395d94a4547b9c0d7f7a9ce9049d87f7",
 							"otherinfo": "\ncookie:ef0085f910efbbcec2c6b49473a1c34b"
 						}
 					],
@@ -827,7 +827,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "353"
+					"sourceid": "283"
 				}
 			]
 		}

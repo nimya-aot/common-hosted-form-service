@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.13.0",
-	"@generated": "Tue, 12 Sep 2023 21:50:50",
+	"@generated": "Tue, 12 Sep 2023 23:32:54",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "543"
+					"sourceid": "527"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "644"
+					"sourceid": "632"
 				},
 				{
 					"pluginid": "10109",
@@ -491,14 +491,6 @@
 					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
 					"instances":[ 
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
-							"method": "GET",
-							"param": "Sec-Fetch-Dest",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-995",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
@@ -523,13 +515,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -542,14 +534,6 @@
 					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
 					"instances":[ 
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
-							"method": "GET",
-							"param": "Sec-Fetch-Mode",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-995",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
@@ -574,13 +558,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -593,14 +577,6 @@
 					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
 					"instances":[ 
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
-							"method": "GET",
-							"param": "Sec-Fetch-Site",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-995",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
@@ -625,13 +601,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -644,14 +620,6 @@
 					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
 					"instances":[ 
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
-							"method": "GET",
-							"param": "Sec-Fetch-User",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-995",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
@@ -676,13 +644,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10112",
@@ -699,7 +667,7 @@
 							"method": "GET",
 							"param": "af5f0cf2f60b5c902e3b533288dc8336",
 							"attack": "",
-							"evidence": "c97f4c5ce8391fc80b1f9808b9c869fc",
+							"evidence": "be71ff35345de6a237694aaa76b7a1b1",
 							"otherinfo": "\ncookie:af5f0cf2f60b5c902e3b533288dc8336"
 						},
 						{
@@ -707,7 +675,7 @@
 							"method": "GET",
 							"param": "af5f0cf2f60b5c902e3b533288dc8336",
 							"attack": "",
-							"evidence": "c97f4c5ce8391fc80b1f9808b9c869fc",
+							"evidence": "be71ff35345de6a237694aaa76b7a1b1",
 							"otherinfo": "\ncookie:af5f0cf2f60b5c902e3b533288dc8336"
 						}
 					],
@@ -859,7 +827,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "306"
+					"sourceid": "296"
 				}
 			]
 		}

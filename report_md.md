@@ -682,7 +682,7 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -730,7 +730,7 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -778,7 +778,7 @@ Specifies the relationship between request initiator's origin and target's origi
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -826,7 +826,7 @@ Specifies if a navigation request was initiated by a user.
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
@@ -866,14 +866,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `af5f0cf2f60b5c902e3b533288dc8336`
   * Attack: ``
-  * Evidence: `be71ff35345de6a237694aaa76b7a1b1`
+  * Evidence: `f8b551c251a0f5491835da08879a04f5`
   * Other Info: `
 cookie:af5f0cf2f60b5c902e3b533288dc8336`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-995
   * Method: `GET`
   * Parameter: `af5f0cf2f60b5c902e3b533288dc8336`
   * Attack: ``
-  * Evidence: `be71ff35345de6a237694aaa76b7a1b1`
+  * Evidence: `f8b551c251a0f5491835da08879a04f5`
   * Other Info: `
 cookie:af5f0cf2f60b5c902e3b533288dc8336`
 

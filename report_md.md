@@ -30,13 +30,13 @@
 | Modern Web Application | Informational | 1 |
 | Non-Storable Content | Informational | 4 |
 | Re-examine Cache-control Directives | Informational | 1 |
-| Sec-Fetch-Dest Header is Missing | Informational | 4 |
-| Sec-Fetch-Mode Header is Missing | Informational | 4 |
-| Sec-Fetch-Site Header is Missing | Informational | 4 |
-| Sec-Fetch-User Header is Missing | Informational | 4 |
-| Session Management Response Identified | Informational | 1 |
+| Sec-Fetch-Dest Header is Missing | Informational | 3 |
+| Sec-Fetch-Mode Header is Missing | Informational | 3 |
+| Sec-Fetch-Site Header is Missing | Informational | 3 |
+| Sec-Fetch-User Header is Missing | Informational | 3 |
+| Session Management Response Identified | Informational | 2 |
 | Storable but Non-Cacheable Content | Informational | 1 |
-| User Agent Fuzzer | Informational | 12 |
+| User Agent Fuzzer | Informational | 24 |
 
 
 
@@ -501,9 +501,7 @@ These cookies did NOT affect the response: 4ab88906b1bbb34d9b3e0fe18ff98c41
   * Parameter: ``
   * Attack: ``
   * Evidence: ``
-  * Other Info: `Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.
-These cookies affected the response: 
-These cookies did NOT affect the response: 4ab88906b1bbb34d9b3e0fe18ff98c41
+  * Other Info: `Dropping this cookie appears to have invalidated the session: [4ab88906b1bbb34d9b3e0fe18ff98c41] A follow-on request with all original cookies still had a different response than the original request. 
 `
 
 Instances: 2
@@ -670,12 +668,6 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
@@ -695,7 +687,7 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Evidence: ``
   * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -724,12 +716,6 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
@@ -749,7 +735,7 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Evidence: ``
   * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -778,12 +764,6 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
@@ -803,7 +783,7 @@ Specifies the relationship between request initiator's origin and target's origi
   * Evidence: ``
   * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -832,12 +812,6 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
@@ -857,7 +831,7 @@ Specifies if a navigation request was initiated by a user.
   * Evidence: ``
   * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -890,11 +864,18 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `4ab88906b1bbb34d9b3e0fe18ff98c41`
   * Attack: ``
-  * Evidence: `f2186c8b2ad6db9c01af7f02a657c896`
+  * Evidence: `6dce8b306117d41837b7dfd88ea635f7`
+  * Other Info: `
+cookie:4ab88906b1bbb34d9b3e0fe18ff98c41`
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017
+  * Method: `GET`
+  * Parameter: `4ab88906b1bbb34d9b3e0fe18ff98c41`
+  * Attack: ``
+  * Evidence: `6dce8b306117d41837b7dfd88ea635f7`
   * Other Info: `
 cookie:4ab88906b1bbb34d9b3e0fe18ff98c41`
 
-Instances: 1
+Instances: 2
 
 ### Solution
 
@@ -1029,8 +1010,80 @@ Check for differences in response based on fuzzed User Agent (eg. mobile sites, 
   * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
   * Evidence: ``
   * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16`
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1017/
+  * Method: `GET`
+  * Parameter: `Header User-Agent`
+  * Attack: `msnbot/1.1 (+http://search.msn.com/msnbot.htm)`
+  * Evidence: ``
+  * Other Info: ``
 
-Instances: 12
+Instances: 24
 
 ### Solution
 

@@ -539,7 +539,7 @@ The application appears to be a modern web application. If you need to explore i
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `<script type="module" crossorigin src="/pr-1004/assets/index-236b1425.js"></script>`
+  * Evidence: `<script type="module" crossorigin src="/pr-1004/assets/index-02c632ae.js"></script>`
   * Other Info: `No links have been found while there are scripts, which is an indication that this is a modern web application.`
 
 Instances: 1
@@ -890,14 +890,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `d9443359b5585d1f876f70e6a14680de`
+  * Evidence: `0e1b7ac1b40207cf6b73782a0e984436`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `d9443359b5585d1f876f70e6a14680de`
+  * Evidence: `0e1b7ac1b40207cf6b73782a0e984436`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 

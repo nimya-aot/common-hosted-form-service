@@ -30,10 +30,10 @@
 | Modern Web Application | Informational | 1 |
 | Non-Storable Content | Informational | 4 |
 | Re-examine Cache-control Directives | Informational | 1 |
-| Sec-Fetch-Dest Header is Missing | Informational | 3 |
-| Sec-Fetch-Mode Header is Missing | Informational | 3 |
-| Sec-Fetch-Site Header is Missing | Informational | 3 |
-| Sec-Fetch-User Header is Missing | Informational | 3 |
+| Sec-Fetch-Dest Header is Missing | Informational | 4 |
+| Sec-Fetch-Mode Header is Missing | Informational | 4 |
+| Sec-Fetch-Site Header is Missing | Informational | 4 |
+| Sec-Fetch-User Header is Missing | Informational | 4 |
 | Session Management Response Identified | Informational | 2 |
 | Storable but Non-Cacheable Content | Informational | 1 |
 | User Agent Fuzzer | Informational | 12 |
@@ -539,7 +539,7 @@ The application appears to be a modern web application. If you need to explore i
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
-  * Evidence: `<script type="module" crossorigin src="/pr-1004/assets/index-69a0070a.js"></script>`
+  * Evidence: `<script type="module" crossorigin src="/pr-1004/assets/index-af015a38.js"></script>`
   * Other Info: `No links have been found while there are scripts, which is an indication that this is a modern web application.`
 
 Instances: 1
@@ -670,6 +670,12 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Dest`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
@@ -682,14 +688,14 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -718,6 +724,12 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Mode`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
@@ -730,14 +742,14 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -766,6 +778,12 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Site`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
@@ -778,14 +796,14 @@ Specifies the relationship between request initiator's origin and target's origi
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -814,6 +832,12 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-User`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
@@ -826,14 +850,14 @@ Specifies if a navigation request was initiated by a user.
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
-Instances: 3
+Instances: 4
 
 ### Solution
 
@@ -866,14 +890,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `ed996eb0e6db19e3375d9b4b809b5f8b`
+  * Evidence: `9ab9c5d6082c713f14372be9c9cb825b`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `ed996eb0e6db19e3375d9b4b809b5f8b`
+  * Evidence: `9ab9c5d6082c713f14372be9c9cb825b`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 

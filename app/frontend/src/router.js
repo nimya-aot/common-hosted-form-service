@@ -382,6 +382,7 @@ export default function getRouter(basePath = '/') {
       if (authStore?.ready && authStore?.authenticated) {
         const formStore = useFormStore();
         formStore.getFormsForCurrentUser();
+        authStore.checkTokenExpiration();
       }
 
       // Handle proper redirections on first page load

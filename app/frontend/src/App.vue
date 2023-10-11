@@ -3,6 +3,7 @@ import BaseNotificationContainer from '~/components/base/BaseNotificationContain
 import BCGovHeader from '~/components/bcgov/BCGovHeader.vue';
 import BCGovNavBar from './components/bcgov/BCGovNavBar.vue';
 import BCGovFooter from '~/components/bcgov/BCGovFooter.vue';
+import BaseWarningDialog from '~/components/base/BaseWarningDialog.vue';
 
 export default {
   components: {
@@ -10,23 +11,26 @@ export default {
     BCGovHeader,
     BCGovNavBar,
     BCGovFooter,
+    BaseWarningDialog,
   },
 };
 </script>
 
 <template>
   <v-layout ref="app" class="app">
+    <BCGovHeader />
+    <BCGovNavBar />
     <v-main class="app">
       <BaseNotificationContainer />
-      <BCGovHeader />
-      <BCGovNavBar />
+
       <RouterView v-slot="{ Component }">
         <transition name="component-fade" mode="out-in">
           <component :is="Component" class="main" />
         </transition>
       </RouterView>
-      <BCGovFooter />
+      <BaseWarningDialog />
     </v-main>
+    <BCGovFooter />
   </v-layout>
 </template>
 

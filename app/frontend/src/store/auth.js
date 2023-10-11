@@ -1,5 +1,8 @@
 import { defineStore } from 'pinia';
 import getRouter from '~/router';
+import { useIdle, useTimestamp, watchPausable } from '@vueuse/core';
+import { ref } from 'vue';
+import moment from 'moment';
 
 /**
  * @function hasRoles
@@ -20,12 +23,19 @@ export const useAuthStore = defineStore('auth', {
     redirectUri: undefined,
     ready: false,
     authenticated: false,
+    showTokenExpiredWarningMSg: false,
+    inActiveCheckInterval: null,
+    updateTokenInterval: null,
+    watchPausable: null,
   }),
   getters: {
     createLoginUrl: (state) => (options) =>
       state.keycloak.createLoginUrl(options),
     createLogoutUrl: (state) => (options) =>
       state.keycloak.createLogoutUrl(options),
+    updateToken: (state) => (minValidity) =>
+      state.keycloak.updateToken(minValidity),
+    clearToken: (state) => () => state.keycloak.clearToken(),
     email: (state) =>
       state.keycloak.tokenParsed ? state.keycloak.tokenParsed.email : '',
     fullName: (state) => state.keycloak.tokenParsed.name,
@@ -120,6 +130,62 @@ export const useAuthStore = defineStore('auth', {
             redirectUri: location.origin,
           })
         );
+      }
+    },
+    async setTokenExpirationWarningDialog({
+      showTokenExpiredWarningMSg,
+      resetToken,
+    }) {
+      if (!showTokenExpiredWarningMSg && resetToken) {
+        this.watchPausable.resume();
+        this.updateToken(-1).catch(() => {
+          this.clearToken();
+          this.logout();
+        });
+      } else if (!resetToken) {
+        clearInterval(this.updateTokenInterval);
+        clearInterval(this.inActiveCheckInterval);
+        this.logout();
+      }
+      this.showTokenExpiredWarningMSg = showTokenExpiredWarningMSg;
+      if (showTokenExpiredWarningMSg) {
+        setTimeout(() => {
+          this.logout();
+        }, 180000);
+      }
+    },
+    async checkTokenExpiration() {
+      if (this.authenticated) {
+        const { idle, lastActive } = useIdle(1000, { initialState: true });
+        const source = ref(idle);
+        const now = useTimestamp({ interval: 1000 });
+        this.watchPausable = watchPausable(source, (value) => {
+          if (value) {
+            console.log('I am that');
+            clearInterval(this.updateTokenInterval);
+            this.inActiveCheckInterval = setInterval(() => {
+              let end = moment(now.value);
+              let active = moment(lastActive.value);
+              let duration = moment.duration(end.diff(active)).as('minutes');
+              if (duration > 1) {
+                this.watchPausable.pause();
+                this.setTokenExpirationWarningDialog({
+                  showTokenExpiredWarningMSg: true,
+                  resetToken: true,
+                });
+              }
+            }, 120000);
+          } else {
+            console.log('I am there');
+            clearInterval(this.inActiveCheckInterval);
+            this.updateTokenInterval = setInterval(() => {
+              this.updateToken(-1).catch(() => {
+                this.clearToken();
+              });
+            }, 240000);
+          }
+        });
+        this.watchPausable.resume();
       }
     },
   },

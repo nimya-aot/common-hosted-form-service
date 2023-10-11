@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.13.0",
-	"@generated": "Wed, 11 Oct 2023 16:05:34",
+	"@generated": "Wed, 11 Oct 2023 16:06:11",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "489"
+					"sourceid": "569"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "592"
+					"sourceid": "674"
 				},
 				{
 					"pluginid": "10109",
@@ -515,7 +515,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -566,7 +566,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -617,7 +617,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -668,7 +668,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -859,7 +859,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "256"
+					"sourceid": "338"
 				}
 			]
 		}

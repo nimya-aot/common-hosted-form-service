@@ -49,7 +49,7 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -109,7 +109,7 @@ Permissions Policy Header is an added layer of security that helps to restrict f
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -167,7 +167,7 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -225,7 +225,7 @@ The response contents are not storable by caching components such as proxy serve
   * Attack: ``
   * Evidence: `no-store`
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: ``
   * Attack: ``
@@ -286,19 +286,19 @@ It must have a status code that is defined as cacheable by default (200, 203, 20
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Dest`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -334,19 +334,19 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Mode`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -382,19 +382,19 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Site`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -430,19 +430,19 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1088
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1091
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-User`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``

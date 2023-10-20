@@ -30,10 +30,10 @@
 | Modern Web Application | Informational | 1 |
 | Non-Storable Content | Informational | 4 |
 | Re-examine Cache-control Directives | Informational | 1 |
-| Sec-Fetch-Dest Header is Missing | Informational | 4 |
-| Sec-Fetch-Mode Header is Missing | Informational | 4 |
-| Sec-Fetch-Site Header is Missing | Informational | 4 |
-| Sec-Fetch-User Header is Missing | Informational | 4 |
+| Sec-Fetch-Dest Header is Missing | Informational | 3 |
+| Sec-Fetch-Mode Header is Missing | Informational | 3 |
+| Sec-Fetch-Site Header is Missing | Informational | 3 |
+| Sec-Fetch-User Header is Missing | Informational | 3 |
 | Session Management Response Identified | Informational | 2 |
 | Storable but Non-Cacheable Content | Informational | 1 |
 | User Agent Fuzzer | Informational | 12 |
@@ -688,14 +688,8 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -742,14 +736,8 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -796,14 +784,8 @@ Specifies the relationship between request initiator's origin and target's origi
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -850,14 +832,8 @@ Specifies if a navigation request was initiated by a user.
   * Attack: ``
   * Evidence: ``
   * Other Info: ``
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 
-Instances: 4
+Instances: 3
 
 ### Solution
 
@@ -890,14 +866,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `e9a6a10067275611e300dc8b947ec4f6`
   * Attack: ``
-  * Evidence: `94e45c7eb0b9a000e9dae150b099d5be`
+  * Evidence: `fd6dad277ec2c9acc9c3fdf06cf5f6fa`
   * Other Info: `
 cookie:e9a6a10067275611e300dc8b947ec4f6`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067
   * Method: `GET`
   * Parameter: `e9a6a10067275611e300dc8b947ec4f6`
   * Attack: ``
-  * Evidence: `94e45c7eb0b9a000e9dae150b099d5be`
+  * Evidence: `fd6dad277ec2c9acc9c3fdf06cf5f6fa`
   * Other Info: `
 cookie:e9a6a10067275611e300dc8b947ec4f6`
 

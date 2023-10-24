@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Tue, 24 Oct 2023 18:28:39",
+	"@generated": "Tue, 24 Oct 2023 21:29:22",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "547"
+					"sourceid": "524"
 				},
 				{
 					"pluginid": "10054",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "650"
+					"sourceid": "627"
 				},
 				{
 					"pluginid": "10109",
@@ -491,6 +491,14 @@
 					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
 					"instances":[ 
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
@@ -500,14 +508,6 @@
 						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067/",
-							"method": "GET",
-							"param": "Sec-Fetch-Dest",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -521,7 +521,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "1"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -534,6 +534,14 @@
 					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
 					"instances":[ 
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
@@ -543,14 +551,6 @@
 						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067/",
-							"method": "GET",
-							"param": "Sec-Fetch-Mode",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -564,7 +564,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "1"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -577,6 +577,14 @@
 					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
 					"instances":[ 
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
@@ -586,14 +594,6 @@
 						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067/",
-							"method": "GET",
-							"param": "Sec-Fetch-Site",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -607,7 +607,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "1"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -619,6 +619,14 @@
 					"riskdesc": "Informational (High)",
 					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
 					"instances":[ 
+						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1067",
 							"method": "GET",
@@ -634,14 +642,6 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
-							"method": "GET",
-							"param": "Sec-Fetch-User",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
 						}
 					],
 					"count": "3",
@@ -650,7 +650,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "1"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10112",
@@ -667,7 +667,7 @@
 							"method": "GET",
 							"param": "e9a6a10067275611e300dc8b947ec4f6",
 							"attack": "",
-							"evidence": "2566e1ca79c49a6c267f1e36e265b68a",
+							"evidence": "13ddba6b6cf84320d4bd3eebeba587cc",
 							"otherinfo": "\ncookie:e9a6a10067275611e300dc8b947ec4f6"
 						},
 						{
@@ -675,7 +675,7 @@
 							"method": "GET",
 							"param": "e9a6a10067275611e300dc8b947ec4f6",
 							"attack": "",
-							"evidence": "2566e1ca79c49a6c267f1e36e265b68a",
+							"evidence": "13ddba6b6cf84320d4bd3eebeba587cc",
 							"otherinfo": "\ncookie:e9a6a10067275611e300dc8b947ec4f6"
 						}
 					],
@@ -827,7 +827,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "314"
+					"sourceid": "298"
 				}
 			]
 		}

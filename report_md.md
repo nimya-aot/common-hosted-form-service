@@ -866,14 +866,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `c08924e7197e93825ce70f6ebf5c11c8`
+  * Evidence: `8c69cb5b837f63856eb76345705dd8d6`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1004
   * Method: `GET`
   * Parameter: `fe4f1d30dba4e588e7fa9af41ce9bb88`
   * Attack: ``
-  * Evidence: `c08924e7197e93825ce70f6ebf5c11c8`
+  * Evidence: `8c69cb5b837f63856eb76345705dd8d6`
   * Other Info: `
 cookie:fe4f1d30dba4e588e7fa9af41ce9bb88`
 

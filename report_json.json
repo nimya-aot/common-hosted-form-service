@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Fri, 3 Nov 2023 17:58:23",
+	"@generated": "Fri, 3 Nov 2023 18:31:34",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -28,7 +28,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -79,7 +79,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -130,7 +130,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -181,7 +181,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -232,7 +232,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -240,7 +240,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -275,7 +275,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -283,7 +283,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -318,7 +318,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -326,7 +326,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -361,7 +361,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1134",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -369,7 +369,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",

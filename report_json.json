@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Fri, 3 Nov 2023 21:34:02",
+	"@generated": "Mon, 6 Nov 2023 18:23:05",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -130,7 +130,7 @@
 							"param": "",
 							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
 							"evidence": "",
-							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: \n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: \n- Unknown\nThe following web/application server has been identified: \n- [Express]\n"
 						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
@@ -138,16 +138,16 @@
 							"param": "",
 							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
 							"evidence": "",
-							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: \n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: \n- Unknown\nThe following web/application server has been identified: \n- [Express]\n"
 						}
 					],
 					"count": "2",
 					"solution": "<p>Disable the 'TRACE' method on the proxy servers, as well as the origin web/application server.</p><p>Disable the 'OPTIONS' method on the proxy servers, as well as the origin web/application server, if it is not required for other purposes, such as 'CORS' (Cross Origin Resource Sharing).</p><p>Configure the web and application servers with custom error pages, to prevent 'fingerprintable' product-specific error pages being leaked to the user in the event of HTTP errors, such as 'TRACK' requests for non-existent pages.</p><p>Configure all proxies, application servers, and web servers to prevent disclosure of the technology and version information in the 'Server' and 'X-Powered-By' HTTP response headers.</p><p></p>",
-					"otherinfo": "<p>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: </p><p>- Unknown</p><p>The following web/application server has been identified: </p><p>- Unknown</p><p></p>",
+					"otherinfo": "<p>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server: </p><p>- Unknown</p><p>The following web/application server has been identified: </p><p>- [Express]</p><p></p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "508"
+					"sourceid": "594"
 				},
 				{
 					"pluginid": "10054",
@@ -356,7 +356,7 @@
 							"param": "",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "Dropping this cookie appears to have invalidated the session: [16cfabe15b64489cbf5694324f344eef] A follow-on request with all original cookies still had a different response than the original request. \n"
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: 16cfabe15b64489cbf5694324f344eef\n"
 						},
 						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
@@ -364,16 +364,16 @@
 							"param": "",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "Dropping this cookie appears to have invalidated the session: [16cfabe15b64489cbf5694324f344eef] A follow-on request with all original cookies still had a different response than the original request. \n"
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: 16cfabe15b64489cbf5694324f344eef\n"
 						}
 					],
 					"count": "2",
 					"solution": "",
-					"otherinfo": "<p>Dropping this cookie appears to have invalidated the session: [16cfabe15b64489cbf5694324f344eef] A follow-on request with all original cookies still had a different response than the original request. </p><p></p>",
+					"otherinfo": "<p>Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.</p><p>These cookies affected the response: </p><p>These cookies did NOT affect the response: 16cfabe15b64489cbf5694324f344eef</p><p></p>",
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "597"
+					"sourceid": "697"
 				},
 				{
 					"pluginid": "10109",
@@ -667,7 +667,7 @@
 							"method": "GET",
 							"param": "16cfabe15b64489cbf5694324f344eef",
 							"attack": "",
-							"evidence": "666ebb4036d30eeff7bf563b9c209ed2",
+							"evidence": "b879cd4117500e330a1443773c0e7bab",
 							"otherinfo": "\ncookie:16cfabe15b64489cbf5694324f344eef"
 						},
 						{
@@ -675,7 +675,7 @@
 							"method": "GET",
 							"param": "16cfabe15b64489cbf5694324f344eef",
 							"attack": "",
-							"evidence": "666ebb4036d30eeff7bf563b9c209ed2",
+							"evidence": "b879cd4117500e330a1443773c0e7bab",
 							"otherinfo": "\ncookie:16cfabe15b64489cbf5694324f344eef"
 						}
 					],
@@ -819,111 +819,15 @@
 							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
 							"evidence": "",
 							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/",
-							"method": "GET",
-							"param": "Header User-Agent",
-							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
-							"evidence": "",
-							"otherinfo": ""
 						}
 					],
-					"count": "24",
+					"count": "12",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "251"
+					"sourceid": "360"
 				}
 			]
 		}

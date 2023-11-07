@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Tue, 7 Nov 2023 00:35:52",
+	"@generated": "Tue, 7 Nov 2023 00:55:03",
 	"site":[ 
 		{
 			"@name": "https://chefs-dev.apps.silver.devops.gov.bc.ca",
@@ -85,7 +85,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "8"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "10020",
@@ -147,7 +147,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "609"
+					"sourceid": "575"
 				},
 				{
 					"pluginid": "10054",
@@ -225,7 +225,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "8"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "10037",
@@ -311,7 +311,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "8"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "10021",
@@ -373,7 +373,7 @@
 					"reference": "<p>http://projects.webappsec.org/Fingerprinting</p>",
 					"cweid": "200",
 					"wascid": "45",
-					"sourceid": "714"
+					"sourceid": "672"
 				},
 				{
 					"pluginid": "10109",
@@ -451,7 +451,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "8"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "10015",
@@ -507,6 +507,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
@@ -515,7 +523,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
@@ -550,6 +558,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
@@ -558,7 +574,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
@@ -593,6 +609,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
@@ -601,7 +625,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
@@ -636,6 +660,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
@@ -644,7 +676,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
@@ -658,8 +690,8 @@
 					"alert": "Session Management Response Identified",
 					"name": "Session Management Response Identified",
 					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
 					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
 					"instances":[ 
 						{
@@ -667,19 +699,11 @@
 							"method": "GET",
 							"param": "16cfabe15b64489cbf5694324f344eef",
 							"attack": "",
-							"evidence": "deb83b18ee5240ae2447b1a329acb172",
-							"otherinfo": "\ncookie:16cfabe15b64489cbf5694324f344eef"
-						},
-						{
-							"uri": "https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136",
-							"method": "GET",
-							"param": "16cfabe15b64489cbf5694324f344eef",
-							"attack": "",
-							"evidence": "deb83b18ee5240ae2447b1a329acb172",
+							"evidence": "a10864b331f10f15d20bc7969c3b5926",
 							"otherinfo": "\ncookie:16cfabe15b64489cbf5694324f344eef"
 						}
 					],
-					"count": "2",
+					"count": "1",
 					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
 					"otherinfo": "<p></p><p>cookie:16cfabe15b64489cbf5694324f344eef</p>",
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
@@ -827,7 +851,7 @@
 					"reference": "<p>https://owasp.org/wstg</p>",
 					"cweid": "0",
 					"wascid": "0",
-					"sourceid": "376"
+					"sourceid": "336"
 				}
 			]
 		}

@@ -670,12 +670,6 @@ For secure content, ensure the cache-control HTTP header is set with "no-cache, 
 
 Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Dest`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
@@ -683,6 +677,12 @@ Specifies how and where the data would be used. For instance, if the value is au
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Dest`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Dest`
   * Attack: ``
@@ -718,12 +718,6 @@ Ensure that Sec-Fetch-Dest header is included in request headers.
 
 Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Mode`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
@@ -731,6 +725,12 @@ Allows to differentiate between requests for navigating between HTML pages and r
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Mode`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Mode`
   * Attack: ``
@@ -766,12 +766,6 @@ Ensure that Sec-Fetch-Mode header is included in request headers.
 
 Specifies the relationship between request initiator's origin and target's origin.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-Site`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
@@ -779,6 +773,12 @@ Specifies the relationship between request initiator's origin and target's origi
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-Site`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-Site`
   * Attack: ``
@@ -814,12 +814,6 @@ Ensure that Sec-Fetch-Site header is included in request headers.
 
 Specifies if a navigation request was initiated by a user.
 
-* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/
-  * Method: `GET`
-  * Parameter: `Sec-Fetch-User`
-  * Attack: ``
-  * Evidence: ``
-  * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
@@ -827,6 +821,12 @@ Specifies if a navigation request was initiated by a user.
   * Evidence: ``
   * Other Info: ``
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136/
+  * Method: `GET`
+  * Parameter: `Sec-Fetch-User`
+  * Attack: ``
+  * Evidence: ``
+  * Other Info: ``
+* URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/sitemap.xml
   * Method: `GET`
   * Parameter: `Sec-Fetch-User`
   * Attack: ``
@@ -866,14 +866,14 @@ The given response has been identified as containing a session management token.
   * Method: `GET`
   * Parameter: `16cfabe15b64489cbf5694324f344eef`
   * Attack: ``
-  * Evidence: `b879cd4117500e330a1443773c0e7bab`
+  * Evidence: `deb83b18ee5240ae2447b1a329acb172`
   * Other Info: `
 cookie:16cfabe15b64489cbf5694324f344eef`
 * URL: https://chefs-dev.apps.silver.devops.gov.bc.ca/pr-1136
   * Method: `GET`
   * Parameter: `16cfabe15b64489cbf5694324f344eef`
   * Attack: ``
-  * Evidence: `b879cd4117500e330a1443773c0e7bab`
+  * Evidence: `deb83b18ee5240ae2447b1a329acb172`
   * Other Info: `
 cookie:16cfabe15b64489cbf5694324f344eef`
 

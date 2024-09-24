@@ -5,7 +5,6 @@ const { currentUser, hasSubmissionPermissions, filterMultipleSubmissions } = req
 const P = require('../common/constants').Permissions;
 const rateLimiter = require('../common/middleware').apiKeyRateLimiter;
 const validateParameter = require('../common/middleware/validateParameter');
-
 const controller = require('./controller');
 
 routes.use(currentUser);
@@ -56,6 +55,14 @@ routes.post('/:formSubmissionId/status', hasSubmissionPermissions([P.SUBMISSION_
 
 routes.post('/:formSubmissionId/email', hasSubmissionPermissions([P.SUBMISSION_READ]), async (req, res, next) => {
   await controller.email(req, res, next);
+});
+
+routes.get('/:formSubmissionId/emailRecipients', hasSubmissionPermissions([P.SUBMISSION_REVIEW]), async (req, res, next) => {
+  await controller.getEmailRecipients(req, res, next);
+});
+
+routes.post('/:formSubmissionId/emailRecipients', hasSubmissionPermissions([P.SUBMISSION_REVIEW]), async (req, res, next) => {
+  await controller.addEmailRecipients(req, res, next);
 });
 
 routes.get('/:formSubmissionId/edits', hasSubmissionPermissions([P.SUBMISSION_READ]), async (req, res, next) => {

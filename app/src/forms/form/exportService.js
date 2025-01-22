@@ -11,7 +11,7 @@ const os = require('os');
 const config = require('config');
 const fileService = require('../file/service');
 const emailService = require('../email/emailService');
-const { v4: uuidv4 } = require('uuid');
+const uuid = require('uuid');
 const nestedObjectsUtil = require('nested-objects-util');
 
 const service = {
@@ -139,7 +139,7 @@ const service = {
 
   _submissionsColumns: (form, params) => {
     // Custom columns not defined - return default column selection behavior
-    let columns = ['submissionId', 'confirmationId', 'formName', 'version', 'createdAt', 'fullName', 'username', 'email'];
+    let columns = ['submissionId', 'confirmationId', 'formName', 'version', 'createdAt', 'fullName', 'username', 'email', 'submittedAt'];
     // if form has 'status updates' enabled in the form settings include these in export
     if (form.enableStatusUpdates) {
       columns = columns.concat(['status', 'assignee', 'assigneeEmail']);
@@ -319,7 +319,7 @@ const service = {
       // (/myfiles folder for local machines / to Object cloud storage for other env) gathering the file storage ID
       // to use it in email for link generation for downloading...
       const path = config.get('files.localStorage.path') ? config.get('files.localStorage.path') : fs.realpathSync(os.tmpdir());
-      const pathToTmpFile = `${path}/${uuidv4()}.csv`;
+      const pathToTmpFile = `${path}/${uuid.v4()}.csv`;
       const outputStream = fs.createWriteStream(pathToTmpFile);
       dataStream.pipe(json2csvParser).pipe(outputStream);
 

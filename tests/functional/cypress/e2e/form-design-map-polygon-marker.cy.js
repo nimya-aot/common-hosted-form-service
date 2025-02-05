@@ -68,6 +68,7 @@ describe('Form Designer', () => {
     
       cy.get(draw_polygon).click();
       });
+      cy.wait(2000);
       cy.get('div[class="leaflet-draw-tooltip leaflet-draw-tooltip-single"]').click();
       cy.get('div[class="leaflet-draw-tooltip leaflet-draw-tooltip-single"]').click();
       cy.get('div[class="leaflet-draw-tooltip leaflet-draw-tooltip-single"]').click();

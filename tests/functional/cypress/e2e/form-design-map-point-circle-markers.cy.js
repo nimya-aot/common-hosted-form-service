@@ -63,8 +63,9 @@ describe('Form Designer', () => {
       cy.wait(2000);
       cy.get('input[value="circle"]').click();
       cy.get('input[value="polygon"]').click();
+      cy.get('input[value="polyline"]').click();
       cy.get('input[name="data[numPoints]"').type('{selectall}{backspace}');
-      cy.get('input[name="data[numPoints]"').type('2');
+      cy.get('input[name="data[numPoints]"').type('4');
       cy.wait(2000);
       });
 });
@@ -88,7 +89,16 @@ describe('Form Designer', () => {
         cy.wait(2000);
         cy.get('g').find('path[stroke-linejoin="round"]').should('exist');
       });
-             
+      cy.get('a.leaflet-draw-draw-polyline').then($el => {
+        const draw_line=$el[0];
+      cy.get(draw_line).click();
+      }); 
+      cy.get('div[class="leaflet-draw-tooltip leaflet-draw-tooltip-single"]').click();
+      cy.get('div[class="leaflet-marker-icon leaflet-mouse-marker leaflet-zoom-hide leaflet-interactive"]').click({ force: true });
+
+      cy.get('a[title="Finish drawing"]').click({ force: true });
+      cy.get('.leaflet-interactive').should('exist');
+      cy.wait(2000);   
       cy.waitForLoad();
       cy.get('button').contains('Save').click();
   // Form saving
@@ -123,6 +133,7 @@ describe('Form Designer', () => {
       cy.get('[data-cy="userFormsLinks"]').click();
       cy.visit(`/${depEnv}/form/manage?f=${arrayValues[0]}`);
       cy.waitForLoad();
+      //
       //Delete form after test run
       cy.get(':nth-child(5) > .v-btn > .v-btn__content > .mdi-delete').click();
       cy.get('[data-test="continue-btn-continue"]').click();

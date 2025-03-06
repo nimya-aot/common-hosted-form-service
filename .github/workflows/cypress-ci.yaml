@@ -28,7 +28,6 @@ jobs:
        uses: cypress-io/github-action@v6
        with:
           working-directory: '${{ github.workspace }}/tests/functional'
-          browser: chrome
        env:
           CYPRESS_keycloakUsername: ${{secrets.keycloakUsername}}
           CYPRESS_keycloakPassword: ${{secrets.keycloakPassword}}

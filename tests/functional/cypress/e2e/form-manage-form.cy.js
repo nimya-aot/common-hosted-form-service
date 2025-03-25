@@ -1,9 +1,6 @@
-import 'cypress-drag-drop';
 import { formsettings } from '../support/login.js';
 
 const depEnv = Cypress.env('depEnv');
-
-
 Cypress.Commands.add('waitForLoad', () => {
   const loaderTimeout = 60000;
 

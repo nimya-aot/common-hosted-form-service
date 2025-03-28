@@ -21,8 +21,8 @@ jobs:
      - name: cache
        uses: actions/cache@v4
        with:
-            path: "tests/functional"
-            key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-${{ github.run_id }}
+            path: ~/.cache/Cypress
+            key: node-modules-${{ hashFiles('tests/functional/package.json') }}
       
      - name: cypress install
        uses: cypress-io/github-action@v6
